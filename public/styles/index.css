@@ -1,0 +1,130 @@
+/* index.css */
+
+/* Reset básico */
+body, h1, ul, li, a, input, select, button, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #4CAF50;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Espaçamento entre os itens */
+}
+
+.navbar-list-item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navbar-list-item a:hover {
+    color: #cce7cc;
+}
+
+/* Container do formulário */
+.form-container {
+    max-width: 500px;
+    background: #fff;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Estilos dos rótulos e inputs */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botão */
+form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-contacts {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-contacts-items a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-contacts-items a:hover {
+    color: #cce7cc;
+}
