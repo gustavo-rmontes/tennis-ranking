@@ -1,6 +1,16 @@
 // Seleciona o botão de envio
 const submitButton = document.querySelector('button[type="button"]');
 
+function formataNome(nome){
+  return nome
+    .trim() // Remove espaços no início e no fim
+    .toLowerCase() // Converte para minúsculas
+    .replace(/\s+/g, ' ') // Substitui múltiplos espaços por um único
+    .split(' ') // Divide a string em palavras
+    .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1)) // Primeira letra maiúscula
+    .join(' '); // Junta as palavras novamente em uma string
+}
+
 // Adiciona um evento de clique ao botão
 submitButton.addEventListener('click', async () => {
   // Captura os valores do formulário
@@ -8,6 +18,8 @@ submitButton.addEventListener('click', async () => {
   const sexo = document.getElementById('sexo').value;
   const classificacao = document.getElementById('classificacao').value;
   const senha = document.getElementById('senha').value;
+
+  formataNome(nome);
 
   // Cria o objeto com os dados do formulário
   const formData = {
