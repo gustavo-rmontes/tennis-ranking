@@ -14,7 +14,7 @@ function formataNome(nome){
 // Adiciona um evento de clique ao botão
 submitButton.addEventListener('click', async () => {
   // Captura os valores do formulário
-  const nome = document.getElementById('nome').value;
+  let nome = document.getElementById('nome').value;
   const sexo = document.getElementById('sexo').value;
   const classificacao = document.getElementById('classificacao').value;
   const senha = document.getElementById('senha').value;
