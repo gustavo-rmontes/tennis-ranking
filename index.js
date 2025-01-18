@@ -19,7 +19,7 @@ submitButton.addEventListener('click', async () => {
   const classificacao = document.getElementById('classificacao').value;
   const senha = document.getElementById('senha').value;
 
-  formataNome(nome);
+  nome = formataNome(nome);
 
   // Cria o objeto com os dados do formulário
   const formData = {
