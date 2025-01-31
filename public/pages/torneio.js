@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const response = await fetch(jogadoresAPI);
             const jogadores = await response.json();
-            classes = [...new Set(jogadores.map(j => j.classificacao))]; // Atualiza classes dinamicamente
+            classes = [...new Set(jogadores.map(j => j.classificacao))].sort(); // Atualiza classes dinamicamente e ordena
             const container = document.getElementById("torneio-container");
             container.innerHTML = "";
 
@@ -16,17 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 const jogadoresClasse = jogadores.filter(j => j.classificacao === classe);
                 if (jogadoresClasse.length < 2) return;
 
-                let html = `<h2>Classe ${classe}</h2>`;
+                let html = `<h2 class='classe-header'>Classe ${classe}</h2>`;
                 let equipes = distribuirEquipes(jogadoresClasse);
                 
                 equipes.forEach((equipe, index) => {
-                    html += `<p>Equipe ${index + 1} - Classe ${classe}: ${equipe.map(j => j.nome).join(", ")}</p>`;
+                    html += `<p class='equipe-info'>Equipe ${index + 1} - Classe ${classe}: ${equipe.map(j => j.nome).join(", ")}</p>`;
                 });
                 
                 for (let rodada = 1; rodada <= rodadas; rodada++) {
-                    html += `<h3>Rodada ${rodada}</h3>`;
+                    html += `<h3 class='rodada-header'>Rodada ${rodada}</h3>`;
                     for (let i = 0; i < equipes.length; i++) {
                         for (let j = i + 1; j < equipes.length; j++) {
+                            html += `<div class='partida-container'>`;
                             html += `<h4>Equipe ${i + 1} vs Equipe ${j + 1}</h4>`;
                             html += `<label>Data do jogo:</label> <input type="date" id="data_${classe}_${rodada}_${i}_${j}"><br>`;
                             
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             }
                             
                             html += gerarPartidaSimples(classe, rodada, i, j, equipes);
+                            html += `</div>`;
                         }
                     }
                 }
