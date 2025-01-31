@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 🔹 URL correta da API
-    const jogadoresAPI = "http://localhost:3000/";
+    // 🔹 URL da API hospedada no Render
+    const jogadoresAPI = "https://tenis-api-v1.onrender.com/";
 
     // Mapeamento das classes para pontuações
     const pontuacoes = {
