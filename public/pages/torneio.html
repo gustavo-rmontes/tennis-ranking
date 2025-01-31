@@ -7,13 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Torneio de Tênis</h1>
-    <p>Preencha as equipes e defina as partidas.</p>
-    
-    <div id="torneio-container"></div>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-list-item"><a href="#">Início</a></li>
+            <li class="navbar-list-item"><a href="#">Ranking</a></li>
+            <li class="navbar-list-item"><a href="#">Torneios</a></li>
+        </ul>
+    </nav>
+
+    <div class="players_list-container">
+        <h1>Torneio de Tênis</h1>
+        <p>Preencha as equipes e defina as partidas.</p>
+        <div id="torneio-container"></div>
+    </div>
     
     <button onclick="registrarResultados()">Registrar Resultados</button>
     
+    <footer>
+        <p>&copy; 2025 Torneio de Tênis - Todos os direitos reservados.</p>
+        <ul class="footer-contacts">
+            <li class="footer-contacts-items"><a href="#">Contato</a></li>
+            <li class="footer-contacts-items"><a href="#">Suporte</a></li>
+            <li class="footer-contacts-items"><a href="#">Sobre Nós</a></li>
+        </ul>
+    </footer>
+
     <script src="torneio.js"></script>
 </body>
 </html>
