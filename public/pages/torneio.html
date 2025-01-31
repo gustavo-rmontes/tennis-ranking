@@ -8,33 +8,9 @@
 </head>
 <body>
     <h1>Torneio de Tênis</h1>
-    <p>Selecione as equipes e insira os resultados das partidas.</p>
+    <p>Preencha as equipes e defina as partidas.</p>
     
-    <label>Data do Torneio:</label>
-    <input type="date" id="dataTorneio">
-    
-    <table>
-        <tr>
-            <th>Equipe</th>
-            <th>Jogadores</th>
-            <th>Resultado</th>
-        </tr>
-        <tr>
-            <td>Dupla 1</td>
-            <td><span id="dupla1"></span></td>
-            <td><input type="text" id="resultadoDupla1" placeholder="2x0 ou 2x1"></td>
-        </tr>
-        <tr>
-            <td>Dupla 2</td>
-            <td><span id="dupla2"></span></td>
-            <td><input type="text" id="resultadoDupla2" placeholder="2x0 ou 2x1"></td>
-        </tr>
-        <tr>
-            <td>Simples</td>
-            <td><span id="simples"></span></td>
-            <td><input type="text" id="resultadoSimples" placeholder="2x0 ou 2x1"></td>
-        </tr>
-    </table>
+    <div id="torneio-container"></div>
     
     <button onclick="registrarResultados()">Registrar Resultados</button>
     
